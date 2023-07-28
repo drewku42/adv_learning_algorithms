@@ -17,8 +17,10 @@ model = Sequential([
 ]) 
 
 # specify loss and cost function
-model.compile(loss = SparseCategoricalCrossentropy(from_logits=True) )
+model.compile(optimizer = tf.keras.optimizers.Adam(learning_rate=1e-3),
+  loss = SparseCategoricalCrossentropy(from_logits=True) )
 # from_logits=True improves rounding errors for numnerical accuracy
+# Adam algorithm automatically adjusts learning rate
 
 # train on data to minimize cost function
 model.fit(X, Y, epochs=100)
