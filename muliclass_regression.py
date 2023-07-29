@@ -8,6 +8,7 @@ import tensorflow as tf # import tensorflow library
 from tensorflow.keras import Sequential # import sequential model
 from tensorflow.keras.layers import Dense # import forward prop layer architecture
 from tensorflow.keras.losses import SparseCategoricalCrossentropy # import crossentropy loss function
+from tensorflow.keras.activations import linear, relu # import activation functions
 
 # define model architecture
 model = Sequential([
