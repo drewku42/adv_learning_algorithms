@@ -12,6 +12,7 @@ from tensorflow.keras.activations import linear, relu # import activation functi
 
 # define model architecture
 model = Sequential([
+  tf.keras.Input(shape=(400,)), # provide batch size, i.e. 400 elements 
   Dense(units=25, activation='relu'), # define first layer with 25 neurons and relu activation function
   Dense(units=15, activation='relu'), # define second layer with 15 neurons and relu activation function
   Dense(units=10, activation='linear') # define third and final layer
